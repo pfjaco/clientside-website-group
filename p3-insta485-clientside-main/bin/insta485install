@@ -1,0 +1,19 @@
+#!/bin/bash
+#insta485 install
+
+#stop on errors, print commands
+set -Eeuo pipefail
+set -x
+
+#create a Python virtual environment
+python3 -m venv env
+
+#activate the Python virtual environment
+source env/bin/activate
+
+#install back end
+pip install -r requirements.txt
+pip install -e .
+
+#install front end
+npm ci .

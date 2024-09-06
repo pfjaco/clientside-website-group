@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block banner %}<a id = "loggedInUser" href="{{url_for('show_user', username = logname)}}">{{logname}}</a>{% endblock banner%}
+{% block content %}
+    
+<div id="reactEntry">
+    Loading ...
+  </div>
+  <!-- Load JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bundle.js') }}"></script>
+{% endblock content %}
